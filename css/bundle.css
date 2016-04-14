@@ -1,28 +1,64 @@
+.buttons {
+  position: fixed;
+  top: 10px;
+  left: 10px; }
+  .buttons button {
+    width: 200px;
+    margin-bottom: 5px; }
+
+.guide {
+  margin-top: 10px;
+  text-align: left;
+  background: #f8f8f8;
+  padding: 25px; }
+  .guide small {
+    float: right;
+    font-size: 11px; }
+  .guide .blue {
+    color: #2f77d1; }
+  .guide .yellow {
+    color: #f4d31e; }
+  .guide .red {
+    color: #d11149; }
+  .guide .green {
+    color: #0a8754; }
+
 .forms {
-  height: 1362px;
-  overflow: hidden;
-  transition: height 1s ease-in-out; }
+  display: block;
+  overflow: hidden; }
   .forms.hideMe {
-    height: 0px; }
+    display: none; }
 
 .chart {
-  height: 0;
+  display: none;
   text-align: center;
   margin-top: 25px;
-  overflow: hidden;
-  transition: height 1s ease-in-out; }
+  overflow: hidden; }
   .chart.showMe {
-    height: 400px; }
+    display: block; }
 
 .container {
   width: 800px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  counter-reset: sectionNum; }
   .container section {
+    counter-increment: sectionNum;
+    position: relative;
     background-color: #f8f8f8;
     border-bottom: 1px solid #dfdfdf;
     margin-bottom: 0;
     overflow: auto;
     padding: 20px 5px 20px 30px; }
+    .container section::before {
+      content: counter(sectionNum);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      color: white;
+      background-color: black;
+      font-size: 11px;
+      padding: 0 6px;
+      line-height: 17px; }
     .container section:nth-child(even) {
       background-color: white; }
     .container section label {

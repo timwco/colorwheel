@@ -85,12 +85,8 @@ traits.forEach( function (group, i) {
 });
 
 function showScore () {
+
   form.classList.add('hideMe');
-  setTimeout(displayChart, 1000);
-}
-
-function displayChart () {
-
   chart.classList.add('showMe');
 
   var data = [
@@ -98,25 +94,25 @@ function displayChart () {
           value: red,
           color:"rgba(209, 17, 73, 1)",
           highlight: "rgba(209, 17, 73, .8)",
-          label: "Red"
+          label: "Powerful Red"
       },
       {
           value: blue,
           color: "rgba(47, 119, 209, 1)",
           highlight: "rgba(47, 119, 209, .8)",
-          label: "Blue"
+          label: "Proper Blue"
       },
       {
           value: yellow,
           color: "rgba(244, 211, 30, 1)",
           highlight: "rgba(244, 211, 30, .8)",
-          label: "Yellow"
+          label: "Playful Yellow"
       },
       {
           value: green,
           color: "rgba(10, 135, 84, 1)",
           highlight: "rgba(10, 135, 84, .8)",
-          label: "Green"
+          label: "Peacful Green"
       }
   ]
   var ctx = document.getElementById("myChart").getContext("2d");
