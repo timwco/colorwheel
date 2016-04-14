@@ -1,0 +1,35 @@
+.forms {
+  height: 1362px;
+  overflow: hidden;
+  transition: height 1s ease-in-out; }
+  .forms.hideMe {
+    height: 0px; }
+
+.chart {
+  height: 0;
+  text-align: center;
+  margin-top: 25px;
+  overflow: hidden;
+  transition: height 1s ease-in-out; }
+  .chart.showMe {
+    height: 400px; }
+
+.container {
+  width: 800px;
+  margin: 0 auto; }
+  .container section {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 20px 5px 20px 30px; }
+    .container section:nth-child(even) {
+      background-color: white; }
+    .container section label {
+      cursor: pointer;
+      float: left;
+      width: 23%;
+      margin-right: 1%;
+      font-size: 12px; }
+      .container section label input {
+        margin-right: 8px; }

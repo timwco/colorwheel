@@ -1,0 +1,50 @@
+$grey: rgba(248, 248, 248, 1);
+$white: rgba(255, 255, 255, 1);
+$dark: rgba(223, 223, 223, 1);
+
+.forms {
+  height: 1362px;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+  &.hideMe {
+    height: 0px;
+  }
+}
+
+.chart {
+  height: 0;
+  text-align: center;
+  margin-top: 25px;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+  &.showMe {
+    height: 400px;
+  }
+}
+
+.container {
+  width:800px;
+  margin: 0 auto;
+
+  section {
+    background-color: $grey;
+    border-bottom: 1px solid $dark;
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 20px 5px 20px 30px;
+    &:nth-child(even) {
+      background-color: $white;
+    }
+    label {
+      cursor: pointer;
+      float: left;
+      width: 23%;
+      margin-right: 1%;
+      font-size: 12px;
+      input {
+        margin-right: 8px;
+      }
+    }
+  }
+
+}
